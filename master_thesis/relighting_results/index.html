@@ -1,0 +1,435 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+  <link rel="stylesheet" type="text/css" href="style.css"> 
+  <script src="images.js" type="text/javascript"></script></head><body>
+  <center>
+  <h1>Image Relighting using Shading Proxies</h1>
+  Bernardo Henz<br><br>
+ <!-- <span style="font-size: large; font-weight: bold;">(Supplementary Materials)</span>
+ -->
+  </center>
+  <br>
+  <br>
+  
+  <p>This web page contain examples of image relightings using our relighting method. Click on any image to open it in its original size.<br>
+</p>
+ <br>
+  <!--
+  <p><u><em>Important</em></u>: These materials are best viewed in a web
+  browser that is <b>not</b> Internet Explorer (IE), since it cannot resize the
+  images properly. Furthermore, in IE you might need to allow ActiveX content
+  to display the images.</p>
+   -->
+
+  <br>
+  
+  <p><b>Table of Contents:</b></p>
+  <ul>
+  <li><a href="#image_relighting">Image Relighting</a></li>
+  <li><a href="#artistic_relighting">Artistic Image Relighting</a></li>
+  <li><a href="#additional_applications">Additional Applications</a></li>
+ <!-- <li><a href="#Kernel">Kernel used in the examples</a></li>
+  <li><a href="#References">References</a></li>
+  -->
+  </ul>
+  <br>
+  
+<!-- Examples -->
+  <!-- ============================================ -->
+  <h2   id="image_relighting">Image Relighting</h2>
+   <br>
+   <p>The following images were segmented using <a target='_blank' href='http://clippingmagic.com/'> Clipping Magic </a> and relit using our method.</p>
+   <p>(Click on an image to view in full size)</p>
+   <br>
+  <br><!-- ============================================ -->
+<!-- Example -->
+
+
+  <!-- ============================================ -->
+  <h3 id="Example1">Afghan Girl</h3>
+  <table width="100%">
+    <tbody><tr>
+      <script type="text/javascript">
+      reset_caption_counter();
+      add_image_with_width('images/afg_girl_original.jpg','<b>Original</b>', '100%');
+	  add_image_with_width('images/afg_girl_top_intense.jpg','Relighting from above', '100%');
+	  add_image_with_width('images/afg_girl_left.jpg','Relighting from left', '100%');
+	  </script></tr><tr> <script>
+	  add_image_with_width('images/afg_girl_ref.jpg','<b>Proxy</b>', '100%');
+	  add_image_with_width('images/afg_girl_top_left.jpg','Relighting from top left', '100%');
+	  add_image_with_width('images/afg_girl_bottom_right.jpg','Relighting from bottom right', '100%');
+	  
+      </script>
+    </tr>
+  </tbody></table>
+     <br>
+     <p>Relighting Sharbat Gula, Steve McCurry's "<b>Afghan Girl</b>" photograph.</p>
+  <br>
+<br>
+
+
+
+ <!-- ============================================ -->
+  <h3 id="Example1">Lamborghini</h3>
+  <table width="100%">
+    <tbody><tr>
+      <script type="text/javascript">
+      reset_caption_counter();
+      add_image_with_width('images/lamborghini_original.jpg','<b>Original</b>', '100%'); 
+      add_image_with_width('images/lamborghini_left.jpg','Relighting from left', '100%');
+	  add_image_with_width('images/lamborghini_bottom.jpg','Relighting from below', '100%');
+	  </script></tr><tr> <script>
+      add_image_with_width('images/lamborghini_ref.jpg','<b>Proxy</b> (Lamborghini Murciélago)', '100%');
+	  add_image_with_width('images/lamborghini_right.jpg','Relighting from right', '100%');
+	  add_image_with_width('images/lamborghini_top.jpg','Relighting from above', '100%');
+	  
+      </script>
+    </tr>
+  </tbody></table>
+     <br>
+     <p>Relighting a car photograph: Lamborghini Aventador.</p>
+  <br>
+<br>
+  <!-- ============================================ -->
+  <h3 id="Example1">Painted Bottles</h3>
+  <table width="100%">
+    <tbody><tr>
+      <script type="text/javascript">
+      reset_caption_counter();
+      add_image_with_width('images/2bottles_original.jpg','<b>Original</b>', '100%');
+      add_image_with_width('images/2bottles_left.jpg','Relighting from left', '100%');
+      add_image_with_width('images/2bottles_up.jpg','Relighting from above', '100%');
+	  add_image_with_width('images/2bottles_right_intense.jpg','Relighting from right with intense light', '100%');
+	  add_image_with_width('images/2bottles_ref.jpg','<b>Proxy</b>', '100%');
+      </script>
+    </tr>
+  </tbody></table>
+     <br>
+     <p>Relighting Susan Jenkins' wine bottle paintings.</p>
+  <br>
+<br>
+
+<!-- ============================================ -->
+  <h3 id="Example1">Simonetta</h3>
+  <table width="100%" >
+    <tbody><tr>
+      <script type="text/javascript">
+      reset_caption_counter();
+      add_image_with_width('images/Simonetta_original.jpg','<b>Original</b>', '100%'); 
+      add_image_with_width('images/Simonetta_bottom.jpg','Relighting from below', '100%');
+	  add_image_with_width('images/Simonetta_top.jpg','Relighting from above', '100%');
+	  add_image_with_width('images/Simonetta_2lights.jpg','Relighting using two light sources', '100%');
+	  add_image_with_width('images/Simonetta_ref.jpg','<b>Proxy</b>', '100%');
+      </script>
+    </tr>
+  </tbody></table>
+     <br>
+     <p>Relighting Sandro Botticelli's painting <i>Portrait of Simonetta Vespucci</i>.</p>
+  <br>
+<br>
+
+<!-- ============================================ -->
+  <h3 id="Example1">Caricature</h3>
+  <table width="100%" >
+    <tbody><tr>
+      <script type="text/javascript">
+      reset_caption_counter();
+      add_image_with_width('images/caricature_original.jpg','<b>Original</b>', '100%'); 
+      add_image_with_width('images/caricature_right.jpg','Relighting from right', '100%');
+	  add_image_with_width('images/caricature_top.jpg','Relighting from above', '100%');
+	  add_image_with_width('images/caricature_bottom_left.jpg','Relighting from bottom left', '100%');
+	  add_image_with_width('images/caricature_ref.jpg','<b>Proxy</b>', '100%');
+      </script>
+    </tr>
+  </tbody></table>
+     <br>
+     <p>Relighting a caricature by Mark Hammermeister.</p>
+  <br>
+<br>
+
+
+
+<!-- ============================================ -->
+  <h3 id="Example1">Nautilus</h3>
+  <table width="100%">
+    <tbody><tr>
+      <script type="text/javascript">
+      reset_caption_counter();
+      add_image_with_width('images/nautilus_original.jpg','<b>Original photograph</b>.', '100%'); 
+      add_image_with_width('images/nautilus_bottom_right.jpg','Relighting from bottom right.', '100%');
+      add_image_with_width('images/nautilus_top.jpg','Relighting from top.', '100%');
+	  add_image_with_width('images/nautilus_bottom.jpg','Relighting from bottom.', '100%');
+	  add_image_with_width('images/nautilus_ref.jpg','<b>Proxy</b>.', '100%');
+      </script>
+    </tr>
+  </tbody></table>
+     <br>
+     <p>Relighting a Tracey Costecu's painting: Watercolor Still Life of Nautilus Shell.</p>
+  <br>
+<br>
+
+<!-- ============================================ -->
+  <h3 id="Example1">Skull</h3>
+  <table width="100%">
+    <tbody><tr>
+      <script type="text/javascript">
+      reset_caption_counter();
+      add_image_with_width('images/skull_original_cropped.jpg','<b>Original</b>', '100%'); 
+      add_image_with_width('images/skull_right_cropped.jpg','Relighting from right', '100%');
+      add_image_with_width('images/skull_right_blue_cropped.jpg','Relighting with blue light source', '100%');
+	  add_image_with_width('images/skull_2lights_cropped.jpg','Relighting using 2 light sources with different colors (blue and red)', '100%');
+	  add_image_with_width('images/skull_ref_cropped.jpg','<b>Proxy</b>', '100%');
+      </script>
+    </tr>
+  </tbody></table>
+     <br>
+     <p>Relighting a skull with color light sources.</p>
+  <br>
+<br>
+
+<!-- ============================================ -->
+  <h3 id="Example1">Black Vase</h3>
+  <table width="100%">
+    <tbody><tr>
+      <script type="text/javascript">
+      reset_caption_counter();
+      add_image_with_width('images/vase_black_original_cropped.jpg','<b>Original</b>', '100%'); 
+      add_image_with_width('images/vase_black_bottom_right_cropped.jpg','Relighting from below', '100%');
+      add_image_with_width('images/vase_black_top_right_cropped.jpg','Relighting from top right', '100%');
+	  add_image_with_width('images/vase_black_inc_top_right_wb_cropped.jpg','Relighting from top right (manipulating shading image)', '100%');
+	  add_image_with_width('images/vase_black_int_left_wb_cropped.jpg','Relighting from left (manipulating shading image)', '100%');
+      </script>
+    </tr>
+  </tbody></table>
+     <br>
+     <p>Relighting a black vase while scaling each color channel by a different scaling factor.</p>
+  <br>
+<br>
+
+
+  <!-- ARTISTIC RELIGHTING -->
+  <!-- ============================================ -->
+  <h2   id="artistic_relighting">Artistic Image Relighting</h2>
+   <br>
+   
+  <br>
+  <!-- ============================================ -->
+    <!-- ============================================ -->
+  <h3 id="Example1">Pencil Drawing</h3>
+  <table width="100%">
+    <tbody><tr>
+      <script type="text/javascript">
+      reset_caption_counter();
+      add_image_with_width('images/pencil_original.jpg','<b>Original</b>', '100%');
+      add_image_with_width('images/pencil_bottom.jpg','Relighting from below', '100%');
+      add_image_with_width('images/pencil_left.jpg','Relighting from left', '100%');
+	  add_image_with_width('images/pencil_2lights.jpg','Relighting using 2 light sources', '100%');
+	  add_image_with_width('images/pencil_ref.jpg','<b>Proxy</b>', '100%');
+      </script>
+    </tr>
+  </tbody></table>
+     <br>
+     <p>Relighting of a pencil drawing by Ray Sun (Sunnyrays).</p>
+  <br>
+<br>
+<!-- ============================================ -->
+  <h3 id="Example1">Van Gogh</h3>
+  <table width="100%">
+    <tbody><tr>
+      <script type="text/javascript">
+      reset_caption_counter();
+      add_image_with_width('images/gogh_original.jpg','<b>Original</b>', '100%');
+      add_image_with_width('images/gogh_top_left.jpg','Relighting from top left', '100%');
+	  add_image_with_width('images/gogh_bottom_left.jpg','Relighting from bottom left', '100%');
+	  add_image_with_width('images/gogh_top.jpg','Relighting from above', '100%');
+	  add_image_with_width('images/gogh_ref.jpg','<b>Proxy</b>', '100%');
+      </script>
+    </tr>
+  </tbody></table>
+     <br>
+     <p>Relighting of Vincent van Gogh's painting: <i>Portrait de l'Artiste sans Barbe</i>.</p>
+  <br>
+<br>
+
+<!-- ============================================ -->
+  <h3 id="Example1">Father Looking Down</h3>
+  <table width="100%">
+    <tbody><tr>
+      <script type="text/javascript">
+      reset_caption_counter();
+      add_image_with_width('images/tim_original.jpg','<b>Original</b>', '100%');
+	  add_image_with_width('images/tim_left_bottom_intense.jpg','Relighting from bottom left with intense light', '100%');
+      add_image_with_width('images/tim_top_right.jpg','Relighting from top right', '100%');
+	  add_image_with_width('images/tim_left_top.jpg','Relighting from top left with intense light', '100%');
+	  add_image_with_width('images/tim_ref.jpg','<b>Proxy</b>', '100%');
+      </script>
+    </tr>
+  </tbody></table>
+     <br>
+     <p>Relighting of Tim Benson's painting: "Father Looking Down".</p>
+  <br>
+<br>
+
+<!-- ============================================ -->
+  <h3 id="Example1">Screw artwork</h3>
+  <table width="100%" >
+    <tbody><tr>
+      <script type="text/javascript">
+      reset_caption_counter();
+      add_image_with_width('images/screw_original.jpg','<b>Original</b>', '100%'); 
+      add_image_with_width('images/screw_relit_left.jpg','Relighting from left', '100%');
+	  add_image_with_width('images/screw_relit_right.jpg','Relighting from right', '100%');
+	  add_image_with_width('images/screw_two_lights.jpg','Relighting using two light sources', '100%');
+      </script>
+    </tr>
+  </tbody></table>
+     <br>
+     <p>Relighting of an artwork made with screws, by Andrew Myers.</p>
+  <br>
+<br>
+
+<!-- ============================================ -->
+  <h3 id="Example1">Newton</h3>
+  <table width="100%">
+    <tbody><tr>
+      <script type="text/javascript">
+      reset_caption_counter();
+      add_image_with_width('images/newton_original.jpg','<b>Original</b>', '100%');
+      add_image_with_width('images/newton_front.jpg','Relighting from front', '100%');
+      add_image_with_width('images/newton_right.jpg','Relighting from right', '100%');
+	  add_image_with_width('images/newton_right_intense.jpg','Intense relighting from right', '100%');
+	  add_image_with_width('images/newton_ref.jpg','<b>Proxy</b>', '100%');
+      </script>
+    </tr>
+  </tbody></table>
+     <br>
+     <p>Relighting of a painting of Isaac Newton by Godfrey Kneller.</p>
+  <br>
+<br>
+
+
+<!-- Kernel -->
+  <!-- ============================================ -->
+  <h2 id="additional_applications">Additional Applications</h2>
+      <p>Our method can be used for additional applications</p>
+  <br>
+  
+  
+<!-- ============================================ -->
+  <h3 id="Example1">Normal and Depth-Map Estimation</h3>
+  <table width="100%">
+    <tbody><tr>
+      <script type="text/javascript">
+      reset_caption_counter();
+      add_image_with_width('images/tim_original.jpg','<b>Original</b>', '100%');
+	  add_image_with_width('images/tim_normalmap.jpg','Normal map recovered by <b>our method</b>', '100%');
+	  add_image_with_width('images/tim_depthmap.jpg','Depth map recovered by <b>our method</b>', '100%');
+	  add_image_with_width('images/tim_normalmap_crazybump.jpg','Normal map recovered by CrazyBump', '100%');
+	  
+	  </script></tr><tr><script>
+	  reset_caption_counter();
+	  add_image_with_width('images/gogh_original.jpg','<b>Original</b>', '100%');
+      add_image_with_width('images/gogh_normalmap_zoomed.jpg','Normal map recovered by <b>our method</b> (zoomed in for better visualization)', '100%');
+	  add_image_with_width('images/gogh_depthmap_zoomed.jpg','Depth map recovered by <b>our method</b> (zoomed in for better visualization)', '100%');
+	  add_image_with_width('images/gogh_normalmap_crazybump.jpg','Normal map recovered by CrazyBump', '100%');
+	  
+	  </script></tr><tr><script>
+	  reset_caption_counter();
+      add_image_with_width('images/outline_man_original.jpg','<b>Original</b>', '100%');
+	  add_image_with_width('images/outline_man_normalmap_zoomed.jpg','Normal map recovered by <b>our method</b> (zoomed in for better visualization)', '100%');
+	  add_image_with_width('images/outline_man_depthmap_zoomed.jpg','Depth map recovered by <b>our method</b> (zoomed in for better visualization)', '100%');
+	  add_image_with_width('images/outline_man_normalmap_crazybump.jpg','Normal map recovered by CrazyBump', '100%');
+	  
+	  </script></tr><tr><script>
+	  reset_caption_counter();
+	  add_image_with_width('images/pencil_original.jpg','<b>Original</b>', '100%');
+      add_image_with_width('images/pencil_normalmap.jpg','Normal map recovered by <b>our method</b>', '100%');
+	  add_image_with_width('images/pencil_depthmap.jpg','Depth map recovered by <b>our method</b>', '100%');
+	  add_image_with_width('images/pencil_normalmap_crazybump.jpg','Normal map recovered by CrazyBump', '100%');
+	  
+	  
+      </script>
+    </tr>
+  </tbody></table>
+
+
+     <br>
+     <p>Comparing normal maps generated by <b>our method</b> with the ones created by <a target='_blank' href='http://www.crazybump.com/'> CrazyBump</a>.</p>
+  <br>
+<br>
+
+
+  </tbody></table>
+<!-- ============================================ -->
+  <h3 id="Example1">Intrinsic-Image Decomposition</h3>
+  <table width="100%">
+    <tbody><tr>
+      <script type="text/javascript">
+      reset_caption_counter();
+      add_image_with_width('images/box_colored_input.jpg','<b>Input image</b>', '100%');
+      add_image_with_width('images/box_colored_albedo.jpg','Recovered albedo', '100%');
+      add_image_with_width('images/box_colored_shading.jpg','Shading', '100%');
+	  add_image_with_width('images/box_colored_recoloring.jpg','Recolored and relit', '100%');
+	  </script>
+    </tr>
+  </tbody></table>
+     <br>
+     <p>Our method can be used to perform intrinsic-image decomposition, which enables material manipulation.</p>
+  <br>
+<br>
+  
+<!-- ============================================ -->
+  <h3 id="Example1">Transferring Shading to Drawings</h3>
+  <table width="100%">
+    <tbody><tr>
+      <script type="text/javascript">
+      reset_caption_counter();
+      add_image_with_width('images/outline_man_original.jpg','<b>Original</b>', '100%');
+      add_image_with_width('images/outline_man_left_shading.jpg','Transferring shading from proxy', '100%');
+      add_image_with_width('images/outline_man_left_colored.jpg','Transferring color to shading using data from <b>Van Gogh</b> artistic relighting', '100%');
+	  add_image_with_width('images/outline_man_ref.jpg','<b>Proxy</b>', '100%');
+      </script></tr><tr><script>
+	  reset_caption_counter();
+      add_image_with_width('images/outline_woman_original.jpg','<b>Original</b>', '100%');
+      add_image_with_width('images/outline_woman_right_shading.jpg','Transferring shading from proxy', '100%');
+      add_image_with_width('images/outline_woman_right_colored.jpg','Transferring color to shading using data from <b>Van Gogh</b> artistic relighting', '100%');
+	  add_image_with_width('images/outline_woman_ref.jpg','<b>Proxy</b>', '100%');
+	  </script>
+    </tr>
+  </tbody></table>
+     <br>
+     <p>Our method can assign shading and even color to outline drawings from proxy.</p>
+  <br>
+<br>
+
+<!-- ============================================ -->
+  <h3 id="Example1">Filtering shading images</h3>
+  <table width="100%">
+    <tbody><tr>
+      <script type="text/javascript">
+      reset_caption_counter();
+      add_image_with_width('images/gogh_relit_noquant.jpg','Artistic relighting', '100%');
+      add_image_with_width('images/gogh_quant_shading.jpg','Performing color quantization on the shading', '100%');
+      add_image_with_width('images/caricature_relit_noquant.jpg','Regular relighting', '94%');
+	  add_image_with_width('images/caricature_quant_shading.jpg','Performing color quantization on the shading', '94%');
+      </script></tr><tr><script>
+	  reset_caption_counter();
+      add_image_with_width('images/gogh_relit_nostyle.jpg','Artistic relighting', '100%');
+      add_image_with_width('images/gogh_relit_stylization.jpg','Applying stylization filter on the shading image', '100%');
+      add_image_with_width('images/caricature_relit_nostyle.jpg','Regular relighting', '94%');
+	  add_image_with_width('images/caricature_relit_detail_enhance.jpg','Applying detail enhance on the shading image', '94%');
+	  </script>
+    </tr>
+  </tbody></table>
+     <br>
+     <p>Our method allows filtering over the shading space, generating newer effects.</p>
+  <br>
+<br>
+
+
+  <br>
+<br>
+
+
+</body></html>

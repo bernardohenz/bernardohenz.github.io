@@ -1,0 +1,196 @@
+header{
+	text-align: center;
+}
+
+#header#left{
+	display: inline-block;
+	width: 50%
+}
+
+#header#right{
+	display: inline-block;
+	width: 40%
+}
+
+#title{
+	font-size: 30px;
+}
+
+div#authors{
+	display: inline-flex;
+}
+
+div#authors span{
+	display: flex;
+	margin-left: 170px;
+	font-size: 20px;
+}
+
+#highlight {
+	text-align: center;
+}
+
+table{
+	margin-left:auto; 
+    margin-right:auto;
+	text-align: center;
+}
+
+table#menu{
+	width: 100%;
+}
+
+#highlight img{
+	width: 15%;
+}
+
+#highlight span{
+	display: inline-block;
+	width: 100%;
+	font-size: 13px;
+}
+
+
+
+/* Global style */
+
+body {
+  font-family: Verdana, Helvetica, Sans-serif;
+  background-color: #FFF;
+  margin: 1em 10%;
+}
+
+a:link, a:visited {
+  color: #002bb8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: #faa700;
+}
+
+div#title {
+  font-size: x-large;
+  font-weight: bolder;
+  margin: 0.75em 0;
+}
+
+table#authors td.author {
+  padding: 0.5em;
+  text-align: center;
+}
+
+table#authors td.author span.author-name {
+  font-weight: bold;
+}
+
+table#authors td.author a.author-email {
+  font-size: small;
+}
+
+table#authors td.author-separator {
+  padding: 1em;
+}
+
+div.institution {
+  font-weight: bold;
+}
+
+table.downloads {
+  /*padding-top: 1em;*/
+}
+
+table.downloads td {
+  padding: 0.25em 2em;
+}
+
+table.downloads img {
+  vertical-align: middle;
+}
+
+p#abstract {
+  text-align: justify;
+}
+
+h1 {
+  color: #222;
+  background-color: #E9E9E9;
+  padding: 0.6em 0 0.3em 1em;
+  font-family: Arial;
+  letter-spacing: 2px;
+  font-size: medium;
+}
+
+h2 {
+  font-size: medium;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #AAA;
+  padding-bottom: 2px;
+}
+
+img {
+  border: none;
+}
+
+img#logo-inf {
+  width: 100px;
+}
+
+img#logo-ufrgs {
+  width: 120px;
+}
+
+.photo-frame {
+  padding: 3px;
+  background-color: #FFF;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000;
+}
+
+.non-portable-drop-shadow {
+  -moz-box-shadow: 3px 3px 4px #888;
+  -webkit-box-shadow: 3px 3px 4px #888;
+  box-shadow: 3px 3px 4px #888;
+}
+
+.img-shadow {
+  float: left;
+  background: url(images/shadow.png) bottom right !important;
+  margin: 10px 0 0 10px;
+}
+
+.img-shadow img {
+  display: block;
+  position: relative;
+  margin: -6px 6px 6px -6px;
+}
+
+#teaser {
+  margin-left: -10%;
+  margin-right: -10%;
+}
+
+.h1-shadow-0 {
+  background: #ddddee;
+  margin: 2em -4% 1em -4%;
+}
+ 
+.h1-shadow-1 {
+  background: #aaaabb;
+}
+ 
+.h1-shadow-2 {
+  background: #777788;
+}
+ 
+.h1-shadow-1, .h1-shadow-2 {
+  position: relative;
+  left: -1px;
+  top: -1px;
+}

@@ -1,0 +1,5 @@
+  <link rel="stylesheet" type="text/css" href="./style.css"> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+  <script src="./jquery.magnific-popup.js"></script>
+  <link rel="stylesheet" href="./magnific-popup.css" />
+  <script src="./images.js" type="text/javascript"></script>

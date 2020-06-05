@@ -1,0 +1,872 @@
+<html><head> 
+ <title>Deep Joint Design of Color Filter Arrays and Demosaicing</title>
+  
+  <link rel="stylesheet" type="text/css" href="./sup_html/style.css"> 
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="./sup_html/magnific-popup.css" />
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+  <script src="./sup_html/jquery.magnific-popup.js"></script>
+  <script src="./sup_html/images.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
+  
+  </head>
+<body style="text-align:justify;">
+  
+  <center>
+  <h1><a href="../index.html">Deep Joint Design of Color Filter Arrays and Demosaicing</a></h1>
+  <span style="font-size: large; font-weight: bold;">Supplementary Material</span><br><br>
+  <table style="border:none;">
+  <tbody><tr style="border:none;">
+   <td style="border:none;text-align:center;line-height:1.1em;">
+      <a href="http://inf.ufrgs.br/~bhenz/" style="color:#000;text-decoration:none;font-weight:bold;font-size:medium;">Bernardo Henz</a><br>
+      <a style="color:#002bb8;font-size:small;text-decoration:none;" href="mailto:bhenz@inf.ufrgs.br">bhenz@inf.ufrgs.br</a>
+    </td>
+    <td style="border:none;text-align:center;line-height:1.1em;">
+      <a href="http://inf.ufrgs.br/~eslgastal/" style="color:#000;text-decoration:none;font-weight:bold;font-size:medium;">Eduardo S. L. Gastal</a><br>
+      <a style="color:#002bb8;font-size:small;text-decoration:none;" href="mailto:eslgastal@inf.ufrgs.br">eslgastal@inf.ufrgs.br</a>
+    </td>
+    <td style="border:none;text-align:center;line-height:1.1em">
+      <a href="http://inf.ufrgs.br/~oliveira/" style="color:#000;text-decoration:none;font-weight:bold;font-size:medium;">Manuel M. Oliveira</a><br>
+      <a style="color:#002bb8;font-size:small;text-decoration:none;" href="mailto:oliveira@inf.ufrgs.br">oliveira@inf.ufrgs.br</a>
+    </td>
+  </tr>
+</tbody></table>
+
+
+  
+  </center>
+  <br><br>
+  
+  <div style="margin: auto 30px; ">
+  This is the supplementary material for the paper <b> Deep Joint Design of Color Filter Arrays and Demosaicing</b>, presented in Eurographics 2018 and published in a special issue of Computer Graphics Forum.
+  We show additional reconstructions, comparing our method for noise-free and noisy scenarios.<br><br>
+  
+
+  The images below are a random sample from the moir&eacute; and vdp datasets [GCPD16]. <b>Best PSNR values shown in bold.</b><br><br>
+  <u><em>Important</em></u>: These materials are best viewed in a web browser that is <b>not</b> Internet Explorer (IE), since it cannot resize images properly.<br><br>
+  <div style="color:blue;"><center><b>Please click on any image to see them in a larger size, then use the arrow keys from your keyboard for navigating between the images.</b></center></div><br>
+  </div>
+  <br>
+ 
+ 
+<div id="tabs" style="width:100%">
+<ul>
+    <li><a href="#tabs-1">Noise-free</a></li>
+    <li><a href="#tabs-2">Noisy (&sigma;=20)</a></li>
+  </ul>
+
+<div id="tabs-1">
+Here, we compare <b>Our 4x4 noise-free</b> against the following state-of-the-art techniques:<br>  
+<ul style="list-style-type: none; text-align:justify; padding: 0 20px;">
+    <li>[Cha16] Chakrabarti: Learning sensor multiplexing design through back-propagation. CoRR abs/1605.07078 (2016).</li>
+    <li>[MBP*09] Mairal et al.: Non-local sparse models for image restoration. In ICCV (2009), pp. 2272-2279.</li>
+    <li>[HST*14] Heide et al.: Flexisp: A flexible camera image processing framework. ACM TOG 33, 6 (2014).</li>
+    <li>[GCPD16] Gharbi et al.: Deep Joint Demosaicking and Denoising. ACM TOG 35, 6 (2016), 191:1-191:12.</li>
+</ul>  
+
+<h3 id="moire">moir&eacute;</h3>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000079/chakrabarti.png','[Cha16]<br> PSNR: 12.82','100%');
+ add_image_with_width('sup_html/moire/000079/mairal.png','[MBP*09]<br> PSNR: 28.01','100%');
+ add_image_with_width('sup_html/moire/000079/heide.png','[HST*14]<br> PSNR: 25.25','100%');
+ add_image_with_width('sup_html/moire/000079/gharbi.png','[GCPD16]<br> PSNR: 27.84','100%');
+ add_image_with_width('sup_html/moire/000079/ours.png','<b>Our 4x4 <br> PSNR: <u>35.56</u></b>','100%');
+ add_image_with_width('sup_html/moire/000079/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000065/chakrabarti.png','[Cha16]<br> PSNR: 22.84','100%');
+ add_image_with_width('sup_html/moire/000065/mairal.png','[MBP*09]<br> PSNR: 41.14','100%');
+ add_image_with_width('sup_html/moire/000065/heide.png','[HST*14]<br> PSNR: 38.96','100%');
+ add_image_with_width('sup_html/moire/000065/gharbi.png','[GCPD16]<br> PSNR: 38.28','100%');
+ add_image_with_width('sup_html/moire/000065/ours.png','<b>Our 4x4 <br> PSNR: <u>46.16</u></b>','100%');
+ add_image_with_width('sup_html/moire/000065/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000012/chakrabarti.png','[Cha16]<br> PSNR: 22.66','100%');
+ add_image_with_width('sup_html/moire/000012/mairal.png','[MBP*09]<br> PSNR: 31.35','100%');
+ add_image_with_width('sup_html/moire/000012/heide.png','[HST*14]<br> PSNR: 31.90','100%');
+ add_image_with_width('sup_html/moire/000012/gharbi.png','[GCPD16]<br> PSNR: 31.23','100%');
+ add_image_with_width('sup_html/moire/000012/ours.png','<b>Our 4x4 <br> PSNR: <u>32.76</u></b>','100%');
+ add_image_with_width('sup_html/moire/000012/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000743/chakrabarti.png','[Cha16]<br> PSNR: 24.24','100%');
+ add_image_with_width('sup_html/moire/000743/mairal.png','[MBP*09]<br> PSNR: 37.22','100%');
+ add_image_with_width('sup_html/moire/000743/heide.png','[HST*14]<br> PSNR: 36.88','100%');
+ add_image_with_width('sup_html/moire/000743/gharbi.png','[GCPD16]<br> PSNR: 40.35','100%');
+ add_image_with_width('sup_html/moire/000743/ours.png','<b>Our 4x4 <br> PSNR: <u>42.23</u></b>','100%');
+ add_image_with_width('sup_html/moire/000743/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000312/chakrabarti.png','[Cha16]<br> PSNR: 22.89','100%');
+ add_image_with_width('sup_html/moire/000312/mairal.png','[MBP*09]<br> PSNR: 31.61','100%');
+ add_image_with_width('sup_html/moire/000312/heide.png','[HST*14]<br> PSNR: 30.99','100%');
+ add_image_with_width('sup_html/moire/000312/gharbi.png','[GCPD16]<br> PSNR: 33.55','100%');
+ add_image_with_width('sup_html/moire/000312/ours.png','<b>Our 4x4 <br> PSNR: <u>35.08</u></b>','100%');
+ add_image_with_width('sup_html/moire/000312/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+ 
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000685/chakrabarti.png','[Cha16]<br> PSNR: 31.56','100%');
+ add_image_with_width('sup_html/moire/000685/mairal.png','[MBP*09]<br> PSNR: 37.22','100%');
+ add_image_with_width('sup_html/moire/000685/heide.png','<b>[HST*14]<br>PSNR: <u>38.08</u></b>','100%');
+ add_image_with_width('sup_html/moire/000685/gharbi.png','[GCPD16]<br> PSNR: 36.88','100%');
+ add_image_with_width('sup_html/moire/000685/ours.png','Our 4x4 <br> PSNR: 36.64','100%');
+ add_image_with_width('sup_html/moire/000685/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+ 
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000252/chakrabarti.png','[Cha16]<br> PSNR: 28.94','100%');
+ add_image_with_width('sup_html/moire/000252/mairal.png','[MBP*09]<br> PSNR: 33.44','100%');
+ add_image_with_width('sup_html/moire/000252/heide.png','[HST*14]<br> PSNR: 33.36','100%');
+ add_image_with_width('sup_html/moire/000252/gharbi.png','[GCPD16]<br> PSNR: 35.18','100%');
+ add_image_with_width('sup_html/moire/000252/ours.png','<b>Our 4x4 <br> PSNR: <u>36.47</u></b>','100%');
+ add_image_with_width('sup_html/moire/000252/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000812/chakrabarti.png','[Cha16]<br> PSNR: 21.74','100%');
+ add_image_with_width('sup_html/moire/000812/mairal.png','[MBP*09]<br> PSNR: 33.09','100%');
+ add_image_with_width('sup_html/moire/000812/heide.png','[HST*14]<br> PSNR: 20.85','100%');
+ add_image_with_width('sup_html/moire/000812/gharbi.png','<b>[GCPD16]<br>PSNR: <u>35.74</u></b>','100%');
+ add_image_with_width('sup_html/moire/000812/ours.png','Our 4x4 <br> PSNR: 35.33','100%');
+ add_image_with_width('sup_html/moire/000812/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000106/chakrabarti.png','[Cha16]<br> PSNR: 18.38','100%');
+ add_image_with_width('sup_html/moire/000106/mairal.png','[MBP*09]<br> PSNR: 18.84','100%');
+ add_image_with_width('sup_html/moire/000106/heide.png','[HST*14]<br> PSNR: 25.35','100%');
+ add_image_with_width('sup_html/moire/000106/gharbi.png','[GCPD16]<br> PSNR: 25.60','100%');
+ add_image_with_width('sup_html/moire/000106/ours.png','<b>Our 4x4 <br> PSNR: <u>25.65</u></b>','100%');
+ add_image_with_width('sup_html/moire/000106/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000621/chakrabarti.png','[Cha16]<br> PSNR: 13.40','100%');
+ add_image_with_width('sup_html/moire/000621/mairal.png','[MBP*09]<br> PSNR: 36.98','100%');
+ add_image_with_width('sup_html/moire/000621/heide.png','[HST*14]<br> PSNR: 36.02','100%');
+ add_image_with_width('sup_html/moire/000621/gharbi.png','[GCPD16]<br> PSNR: 39.58','100%');
+ add_image_with_width('sup_html/moire/000621/ours.png','<b>Our 4x4 <br> PSNR: <u>40.19</u></b>','100%');
+ add_image_with_width('sup_html/moire/000621/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000307/chakrabarti.png','[Cha16]<br> PSNR: 27.44','100%');
+ add_image_with_width('sup_html/moire/000307/mairal.png','[MBP*09]<br> PSNR: 34.44','100%');
+ add_image_with_width('sup_html/moire/000307/heide.png','[HST*14]<br> PSNR: 34.78','100%');
+ add_image_with_width('sup_html/moire/000307/gharbi.png','[GCPD16]<br> PSNR: 37.27','100%');
+ add_image_with_width('sup_html/moire/000307/ours.png','<b>Our 4x4 <br> PSNR: <u>39.40</u></b>','100%');
+ add_image_with_width('sup_html/moire/000307/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000947/chakrabarti.png','[Cha16]<br> PSNR: 29.90','100%');
+ add_image_with_width('sup_html/moire/000947/mairal.png','[MBP*09]<br> PSNR: 37.22','100%');
+ add_image_with_width('sup_html/moire/000947/heide.png','[HST*14]<br> PSNR: 37.12','100%');
+ add_image_with_width('sup_html/moire/000947/gharbi.png','<b>[GCPD16]<br>PSNR: <u>39.60</u></b>','100%');
+ add_image_with_width('sup_html/moire/000947/ours.png','Our 4x4 <br> PSNR: 38.70','100%');
+ add_image_with_width('sup_html/moire/000947/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000172/chakrabarti.png','[Cha16]<br> PSNR: 16.42','100%');
+ add_image_with_width('sup_html/moire/000172/mairal.png','[MBP*09]<br> PSNR: 27.77','100%');
+ add_image_with_width('sup_html/moire/000172/heide.png','<b>[HST*14]<br>PSNR: <u>41.97</u></b>','100%');
+ add_image_with_width('sup_html/moire/000172/gharbi.png','[GCPD16]<br> PSNR: 34.86','100%');
+ add_image_with_width('sup_html/moire/000172/ours.png','Our 4x4 <br> PSNR: 35.72','100%');
+ add_image_with_width('sup_html/moire/000172/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000443/chakrabarti.png','[Cha16]<br> PSNR: 24.54','100%');
+ add_image_with_width('sup_html/moire/000443/mairal.png','[MBP*09]<br> PSNR: 38.66','100%');
+ add_image_with_width('sup_html/moire/000443/heide.png','[HST*14]<br> PSNR: 40.87','100%');
+ add_image_with_width('sup_html/moire/000443/gharbi.png','[GCPD16]<br> PSNR: 42.59','100%');
+ add_image_with_width('sup_html/moire/000443/ours.png','<b>Our 4x4 <br> PSNR: <u>45.15</u></b>','100%');
+ add_image_with_width('sup_html/moire/000443/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000958/chakrabarti.png','[Cha16]<br> PSNR: 25.86','100%');
+ add_image_with_width('sup_html/moire/000958/mairal.png','[MBP*09]<br> PSNR: 34.19','100%');
+ add_image_with_width('sup_html/moire/000958/heide.png','[HST*14]<br> PSNR: 35.02','100%');
+ add_image_with_width('sup_html/moire/000958/gharbi.png','[GCPD16]<br> PSNR: 36.80','100%');
+ add_image_with_width('sup_html/moire/000958/ours.png','<b>Our 4x4 <br> PSNR: <u>36.91</u></b>','100%');
+ add_image_with_width('sup_html/moire/000958/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000407/chakrabarti.png','[Cha16]<br> PSNR: 22.25','100%');
+ add_image_with_width('sup_html/moire/000407/mairal.png','[MBP*09]<br> PSNR: 35.89','100%');
+ add_image_with_width('sup_html/moire/000407/heide.png','[HST*14]<br> PSNR: 26.47','100%');
+ add_image_with_width('sup_html/moire/000407/gharbi.png','[GCPD16]<br> PSNR: 41.01','100%');
+ add_image_with_width('sup_html/moire/000407/ours.png','<b>Our 4x4 <br> PSNR: <u>42.98</u></b>','100%');
+ add_image_with_width('sup_html/moire/000407/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000209/chakrabarti.png','[Cha16]<br> PSNR: 25.05','100%');
+ add_image_with_width('sup_html/moire/000209/mairal.png','[MBP*09]<br> PSNR: 22.65','100%');
+ add_image_with_width('sup_html/moire/000209/heide.png','[HST*14]<br> PSNR: 37.01','100%');
+ add_image_with_width('sup_html/moire/000209/gharbi.png','<b>[GCPD16]<br>PSNR: <u>37.32</u></b>','100%');
+ add_image_with_width('sup_html/moire/000209/ours.png','Our 4x4 <br> PSNR: 37.08','100%');
+ add_image_with_width('sup_html/moire/000209/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000220/chakrabarti.png','[Cha16]<br> PSNR: 16.18','100%');
+ add_image_with_width('sup_html/moire/000220/mairal.png','[MBP*09]<br> PSNR: 36.76','100%');
+ add_image_with_width('sup_html/moire/000220/heide.png','[HST*14]<br> PSNR: 42.50','100%');
+ add_image_with_width('sup_html/moire/000220/gharbi.png','[GCPD16]<br> PSNR: 41.31','100%');
+ add_image_with_width('sup_html/moire/000220/ours.png','<b>Our 4x4 <br> PSNR: <u>43.85</u></b>','100%');
+ add_image_with_width('sup_html/moire/000220/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000826/chakrabarti.png','[Cha16]<br> PSNR: 24.70','100%');
+ add_image_with_width('sup_html/moire/000826/mairal.png','[MBP*09]<br> PSNR: 33.05','100%');
+ add_image_with_width('sup_html/moire/000826/heide.png','[HST*14]<br> PSNR: 29.50','100%');
+ add_image_with_width('sup_html/moire/000826/gharbi.png','[GCPD16]<br> PSNR: 39.87','100%');
+ add_image_with_width('sup_html/moire/000826/ours.png','<b>Our 4x4 <br> PSNR: <u>43.10</u></b>','100%');
+ add_image_with_width('sup_html/moire/000826/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire/000661/chakrabarti.png','[Cha16]<br> PSNR: 27.82','100%');
+ add_image_with_width('sup_html/moire/000661/mairal.png','[MBP*09]<br> PSNR: 34.84','100%');
+ add_image_with_width('sup_html/moire/000661/heide.png','[HST*14]<br> PSNR: 30.29','100%');
+ add_image_with_width('sup_html/moire/000661/gharbi.png','[GCPD16]<br> PSNR: 36.13','100%');
+ add_image_with_width('sup_html/moire/000661/ours.png','<b>Our 4x4 <br> PSNR: <u>37.99</u></b>','100%');
+ add_image_with_width('sup_html/moire/000661/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+ 
+ 
+  <h3 id="hdrvdp">vdp</h3><table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000892/chakrabarti.png','[Cha16]<br> PSNR: 22.04','100%');
+ add_image_with_width('sup_html/hdrvdp/000892/mairal.png','[MBP*09]<br> PSNR: 25.60','100%');
+ add_image_with_width('sup_html/hdrvdp/000892/heide.png','[HST*14]<br> PSNR: 24.89','100%');
+ add_image_with_width('sup_html/hdrvdp/000892/gharbi.png','[GCPD16]<br> PSNR: 28.11','100%');
+ add_image_with_width('sup_html/hdrvdp/000892/ours.png','<b>Our 4x4 <br> PSNR: <u>29.00</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000892/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000789/chakrabarti.png','[Cha16]<br> PSNR: 24.10','100%');
+ add_image_with_width('sup_html/hdrvdp/000789/mairal.png','[MBP*09]<br> PSNR: 33.11','100%');
+ add_image_with_width('sup_html/hdrvdp/000789/heide.png','[HST*14]<br> PSNR: 32.54','100%');
+ add_image_with_width('sup_html/hdrvdp/000789/gharbi.png','[GCPD16]<br> PSNR: 36.60','100%');
+ add_image_with_width('sup_html/hdrvdp/000789/ours.png','<b>Our 4x4 <br> PSNR: <u>39.00</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000789/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000762/chakrabarti.png','[Cha16]<br> PSNR: 29.97','100%');
+ add_image_with_width('sup_html/hdrvdp/000762/mairal.png','[MBP*09]<br> PSNR: 34.90','100%');
+ add_image_with_width('sup_html/hdrvdp/000762/heide.png','[HST*14]<br> PSNR: 37.11','100%');
+ add_image_with_width('sup_html/hdrvdp/000762/gharbi.png','[GCPD16]<br> PSNR: 38.59','100%');
+ add_image_with_width('sup_html/hdrvdp/000762/ours.png','<b>Our 4x4 <br> PSNR: <u>40.58</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000762/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000813/chakrabarti.png','[Cha16]<br> PSNR: 17.95','100%');
+ add_image_with_width('sup_html/hdrvdp/000813/mairal.png','[MBP*09]<br> PSNR: 42.06','100%');
+ add_image_with_width('sup_html/hdrvdp/000813/heide.png','[HST*14]<br> PSNR: 38.04','100%');
+ add_image_with_width('sup_html/hdrvdp/000813/gharbi.png','[GCPD16]<br> PSNR: 44.49','100%');
+ add_image_with_width('sup_html/hdrvdp/000813/ours.png','<b>Our 4x4 <br> PSNR: <u>45.70</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000813/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000875/chakrabarti.png','[Cha16]<br> PSNR: 17.58','100%');
+ add_image_with_width('sup_html/hdrvdp/000875/mairal.png','[MBP*09]<br> PSNR: 30.54','100%');
+ add_image_with_width('sup_html/hdrvdp/000875/heide.png','[HST*14]<br> PSNR: 27.21','100%');
+ add_image_with_width('sup_html/hdrvdp/000875/gharbi.png','[GCPD16]<br> PSNR: 32.68','100%');
+ add_image_with_width('sup_html/hdrvdp/000875/ours.png','<b>Our 4x4 <br> PSNR: <u>33.68</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000875/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000575/chakrabarti.png','[Cha16]<br> PSNR: 25.34','100%');
+ add_image_with_width('sup_html/hdrvdp/000575/mairal.png','[MBP*09]<br> PSNR: 32.92','100%');
+ add_image_with_width('sup_html/hdrvdp/000575/heide.png','[HST*14]<br> PSNR: 33.74','100%');
+ add_image_with_width('sup_html/hdrvdp/000575/gharbi.png','[GCPD16]<br> PSNR: 37.17','100%');
+ add_image_with_width('sup_html/hdrvdp/000575/ours.png','<b>Our 4x4 <br> PSNR: <u>39.05</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000575/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000576/chakrabarti.png','[Cha16]<br> PSNR: 26.02','100%');
+ add_image_with_width('sup_html/hdrvdp/000576/mairal.png','[MBP*09]<br> PSNR: 29.26','100%');
+ add_image_with_width('sup_html/hdrvdp/000576/heide.png','[HST*14]<br> PSNR: 29.09','100%');
+ add_image_with_width('sup_html/hdrvdp/000576/gharbi.png','[GCPD16]<br> PSNR: 31.84','100%');
+ add_image_with_width('sup_html/hdrvdp/000576/ours.png','<b>Our 4x4 <br> PSNR: <u>32.10</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000576/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000564/chakrabarti.png','[Cha16]<br> PSNR: 21.88','100%');
+ add_image_with_width('sup_html/hdrvdp/000564/mairal.png','[MBP*09]<br> PSNR: 28.92','100%');
+ add_image_with_width('sup_html/hdrvdp/000564/heide.png','[HST*14]<br> PSNR: 27.88','100%');
+ add_image_with_width('sup_html/hdrvdp/000564/gharbi.png','[GCPD16]<br> PSNR: 31.68','100%');
+ add_image_with_width('sup_html/hdrvdp/000564/ours.png','<b>Our 4x4 <br> PSNR: <u>32.61</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000564/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000484/chakrabarti.png','[Cha16]<br> PSNR: 28.69','100%');
+ add_image_with_width('sup_html/hdrvdp/000484/mairal.png','[MBP*09]<br> PSNR: 34.51','100%');
+ add_image_with_width('sup_html/hdrvdp/000484/heide.png','[HST*14]<br> PSNR: 36.70','100%');
+ add_image_with_width('sup_html/hdrvdp/000484/gharbi.png','[GCPD16]<br> PSNR: 38.57','100%');
+ add_image_with_width('sup_html/hdrvdp/000484/ours.png','<b>Our 4x4 <br> PSNR: <u>40.00</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000484/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000249/chakrabarti.png','[Cha16]<br> PSNR: 27.77','100%');
+ add_image_with_width('sup_html/hdrvdp/000249/mairal.png','[MBP*09]<br> PSNR: 33.47','100%');
+ add_image_with_width('sup_html/hdrvdp/000249/heide.png','[HST*14]<br> PSNR: 34.03','100%');
+ add_image_with_width('sup_html/hdrvdp/000249/gharbi.png','[GCPD16]<br> PSNR: 36.06','100%');
+ add_image_with_width('sup_html/hdrvdp/000249/ours.png','<b>Our 4x4 <br> PSNR: <u>38.34</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000249/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000696/chakrabarti.png','[Cha16]<br> PSNR: 28.93','100%');
+ add_image_with_width('sup_html/hdrvdp/000696/mairal.png','[MBP*09]<br> PSNR: 32.27','100%');
+ add_image_with_width('sup_html/hdrvdp/000696/heide.png','[HST*14]<br> PSNR: 36.95','100%');
+ add_image_with_width('sup_html/hdrvdp/000696/gharbi.png','[GCPD16]<br> PSNR: 39.06','100%');
+ add_image_with_width('sup_html/hdrvdp/000696/ours.png','<b>Our 4x4 <br> PSNR: <u>40.13</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000696/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000355/chakrabarti.png','[Cha16]<br> PSNR: 24.00','100%');
+ add_image_with_width('sup_html/hdrvdp/000355/mairal.png','[MBP*09]<br> PSNR: 41.86','100%');
+ add_image_with_width('sup_html/hdrvdp/000355/heide.png','[HST*14]<br> PSNR: 40.65','100%');
+ add_image_with_width('sup_html/hdrvdp/000355/gharbi.png','[GCPD16]<br> PSNR: 43.24','100%');
+ add_image_with_width('sup_html/hdrvdp/000355/ours.png','<b>Our 4x4 <br> PSNR: <u>44.35</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000355/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000620/chakrabarti.png','[Cha16]<br> PSNR: 24.62','100%');
+ add_image_with_width('sup_html/hdrvdp/000620/mairal.png','[MBP*09]<br> PSNR: 27.29','100%');
+ add_image_with_width('sup_html/hdrvdp/000620/heide.png','[HST*14]<br> PSNR: 27.34','100%');
+ add_image_with_width('sup_html/hdrvdp/000620/gharbi.png','[GCPD16]<br> PSNR: 31.05','100%');
+ add_image_with_width('sup_html/hdrvdp/000620/ours.png','<b>Our 4x4 <br> PSNR: <u>31.63</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000620/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000555/chakrabarti.png','[Cha16]<br> PSNR: 26.76','100%');
+ add_image_with_width('sup_html/hdrvdp/000555/mairal.png','[MBP*09]<br> PSNR: 32.13','100%');
+ add_image_with_width('sup_html/hdrvdp/000555/heide.png','[HST*14]<br> PSNR: 34.43','100%');
+ add_image_with_width('sup_html/hdrvdp/000555/gharbi.png','[GCPD16]<br> PSNR: 36.36','100%');
+ add_image_with_width('sup_html/hdrvdp/000555/ours.png','<b>Our 4x4 <br> PSNR: <u>38.08</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000555/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000961/chakrabarti.png','[Cha16]<br> PSNR: 26.07','100%');
+ add_image_with_width('sup_html/hdrvdp/000961/mairal.png','[MBP*09]<br> PSNR: 29.45','100%');
+ add_image_with_width('sup_html/hdrvdp/000961/heide.png','[HST*14]<br> PSNR: 30.90','100%');
+ add_image_with_width('sup_html/hdrvdp/000961/gharbi.png','[GCPD16]<br> PSNR: 33.18','100%');
+ add_image_with_width('sup_html/hdrvdp/000961/ours.png','<b>Our 4x4 <br> PSNR: <u>35.14</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000961/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000088/chakrabarti.png','[Cha16]<br> PSNR: 21.93','100%');
+ add_image_with_width('sup_html/hdrvdp/000088/mairal.png','[MBP*09]<br> PSNR: 28.87','100%');
+ add_image_with_width('sup_html/hdrvdp/000088/heide.png','[HST*14]<br> PSNR: 29.75','100%');
+ add_image_with_width('sup_html/hdrvdp/000088/gharbi.png','[GCPD16]<br> PSNR: 32.78','100%');
+ add_image_with_width('sup_html/hdrvdp/000088/ours.png','<b>Our 4x4 <br> PSNR: <u>33.74</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000088/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000521/chakrabarti.png','[Cha16]<br> PSNR: 26.18','100%');
+ add_image_with_width('sup_html/hdrvdp/000521/mairal.png','[MBP*09]<br> PSNR: 30.00','100%');
+ add_image_with_width('sup_html/hdrvdp/000521/heide.png','[HST*14]<br> PSNR: 30.01','100%');
+ add_image_with_width('sup_html/hdrvdp/000521/gharbi.png','[GCPD16]<br> PSNR: 32.93','100%');
+ add_image_with_width('sup_html/hdrvdp/000521/ours.png','<b>Our 4x4 <br> PSNR: <u>34.19</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000521/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000742/chakrabarti.png','[Cha16]<br> PSNR: 23.72','100%');
+ add_image_with_width('sup_html/hdrvdp/000742/mairal.png','[MBP*09]<br> PSNR: 32.62','100%');
+ add_image_with_width('sup_html/hdrvdp/000742/heide.png','[HST*14]<br> PSNR: 32.18','100%');
+ add_image_with_width('sup_html/hdrvdp/000742/gharbi.png','[GCPD16]<br> PSNR: 34.43','100%');
+ add_image_with_width('sup_html/hdrvdp/000742/ours.png','<b>Our 4x4 <br> PSNR: <u>36.30</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000742/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000637/chakrabarti.png','[Cha16]<br> PSNR: 26.03','100%');
+ add_image_with_width('sup_html/hdrvdp/000637/mairal.png','[MBP*09]<br> PSNR: 35.33','100%');
+ add_image_with_width('sup_html/hdrvdp/000637/heide.png','[HST*14]<br> PSNR: 33.92','100%');
+ add_image_with_width('sup_html/hdrvdp/000637/gharbi.png','[GCPD16]<br> PSNR: 37.34','100%');
+ add_image_with_width('sup_html/hdrvdp/000637/ours.png','<b>Our 4x4 <br> PSNR: <u>39.09</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000637/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp/000911/chakrabarti.png','[Cha16]<br> PSNR: 11.37','100%');
+ add_image_with_width('sup_html/hdrvdp/000911/mairal.png','[MBP*09]<br> PSNR: 35.21','100%');
+ add_image_with_width('sup_html/hdrvdp/000911/heide.png','[HST*14]<br> PSNR: 35.20','100%');
+ add_image_with_width('sup_html/hdrvdp/000911/gharbi.png','[GCPD16]<br> PSNR: 36.72','100%');
+ add_image_with_width('sup_html/hdrvdp/000911/ours.png','<b>Our 4x4 <br> PSNR: <u>37.61</u></b>','100%');
+ add_image_with_width('sup_html/hdrvdp/000911/ground_truth.png','Ground Truth <br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="tabs-2">
+Here, we compare <b>Our 4x4 noise</b> against the following state-of-the-art techniques:<br>  
+<ul style="list-style-type: none; text-align:justify; padding: 0 20px;">
+    <li>[Cha16] Chakrabarti: Learning sensor multiplexing design through back-propagation. CoRR abs/1605.07078 (2016).</li>
+    <li>[CM12] Condat and Mosaddegh: Joint demosaicking and denoisingby total variation minimization. In ICIP (2012), pp. 2781-2784.</li>
+    <li>[GCPD16] Gharbi et al.: Deep Joint Demosaicking and Denoising. ACM TOG 35, 6 (2016), 191:1-191:12.</li>
+</ul>  
+
+<h3 id="moire">moir&eacute;</h3><table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire_noise20/000552/corruped.png',' Corrupted Image  <br>  PSNR: 22.12','100%');
+ add_image_with_width('sup_html/moire_noise20/000552/chakrabarti.png','[Cha16]<br> PSNR: 22.97','100%');
+ add_image_with_width('sup_html/moire_noise20/000552/condat.png','[CM12]<br> PSNR: 22.51','100%');
+ add_image_with_width('sup_html/moire_noise20/000552/gharbi.png','[GCPD16]<br> PSNR: 27.51','100%');
+ add_image_with_width('sup_html/moire_noise20/000552/ours.png','<b>Our 4x4<br> PSNR: <u>28.75</u></br>','100%');
+ add_image_with_width('sup_html/moire_noise20/000552/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire_noise20/000731/corruped.png',' Corrupted Image  <br>  PSNR: 22.13','100%');
+ add_image_with_width('sup_html/moire_noise20/000731/chakrabarti.png','[Cha16]<br> PSNR: 24.21','100%');
+ add_image_with_width('sup_html/moire_noise20/000731/condat.png','[CM12]<br> PSNR: 22.63','100%');
+ add_image_with_width('sup_html/moire_noise20/000731/gharbi.png','[GCPD16]<br> PSNR: 28.24','100%');
+ add_image_with_width('sup_html/moire_noise20/000731/ours.png','<b>Our 4x4<br> PSNR: <u>29.85</u></br>','100%');
+ add_image_with_width('sup_html/moire_noise20/000731/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire_noise20/000433/corruped.png',' Corrupted Image  <br>  PSNR: 22.36','100%');
+ add_image_with_width('sup_html/moire_noise20/000433/chakrabarti.png','[Cha16]<br> PSNR: 22.74','100%');
+ add_image_with_width('sup_html/moire_noise20/000433/condat.png','[CM12]<br> PSNR: 22.54','100%');
+ add_image_with_width('sup_html/moire_noise20/000433/gharbi.png','<b>[GCPD16]<br> PSNR: <u>29.08</u></br>','100%');
+ add_image_with_width('sup_html/moire_noise20/000433/ours.png','Our 4x4<br> PSNR: 28.54','100%');
+ add_image_with_width('sup_html/moire_noise20/000433/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire_noise20/000584/corruped.png',' Corrupted Image  <br>  PSNR: 23.29','100%');
+ add_image_with_width('sup_html/moire_noise20/000584/chakrabarti.png','[Cha16]<br> PSNR: 18.24','100%');
+ add_image_with_width('sup_html/moire_noise20/000584/condat.png','[CM12]<br> PSNR: 23.24','100%');
+ add_image_with_width('sup_html/moire_noise20/000584/gharbi.png','[GCPD16]<br> PSNR: 26.75','100%');
+ add_image_with_width('sup_html/moire_noise20/000584/ours.png','<b>Our 4x4<br> PSNR: <u>29.20</u></br>','100%');
+ add_image_with_width('sup_html/moire_noise20/000584/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire_noise20/000363/corruped.png',' Corrupted Image  <br>  PSNR: 22.18','100%');
+ add_image_with_width('sup_html/moire_noise20/000363/chakrabarti.png','[Cha16]<br> PSNR: 23.68','100%');
+ add_image_with_width('sup_html/moire_noise20/000363/condat.png','[CM12]<br> PSNR: 22.14','100%');
+ add_image_with_width('sup_html/moire_noise20/000363/gharbi.png','[GCPD16]<br> PSNR: 26.80','100%');
+ add_image_with_width('sup_html/moire_noise20/000363/ours.png','<b>Our 4x4<br> PSNR: <u>28.04</u></br>','100%');
+ add_image_with_width('sup_html/moire_noise20/000363/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire_noise20/000359/corruped.png',' Corrupted Image  <br>  PSNR: 22.13','100%');
+ add_image_with_width('sup_html/moire_noise20/000359/chakrabarti.png','[Cha16]<br> PSNR: 20.17','100%');
+ add_image_with_width('sup_html/moire_noise20/000359/condat.png','[CM12]<br> PSNR: 22.15','100%');
+ add_image_with_width('sup_html/moire_noise20/000359/gharbi.png','[GCPD16]<br> PSNR: 24.68','100%');
+ add_image_with_width('sup_html/moire_noise20/000359/ours.png','<b>Our 4x4<br> PSNR: <u>26.20</u></br>','100%');
+ add_image_with_width('sup_html/moire_noise20/000359/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire_noise20/000703/corruped.png',' Corrupted Image  <br>  PSNR: 22.82','100%');
+ add_image_with_width('sup_html/moire_noise20/000703/chakrabarti.png','[Cha16]<br> PSNR: 23.88','100%');
+ add_image_with_width('sup_html/moire_noise20/000703/condat.png','[CM12]<br> PSNR: 23.25','100%');
+ add_image_with_width('sup_html/moire_noise20/000703/gharbi.png','[GCPD16]<br> PSNR: 28.77','100%');
+ add_image_with_width('sup_html/moire_noise20/000703/ours.png','<b>Our 4x4<br> PSNR: <u>30.24</u></br>','100%');
+ add_image_with_width('sup_html/moire_noise20/000703/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire_noise20/000802/corruped.png',' Corrupted Image  <br>  PSNR: 23.44','100%');
+ add_image_with_width('sup_html/moire_noise20/000802/chakrabarti.png','[Cha16]<br> PSNR: 18.30','100%');
+ add_image_with_width('sup_html/moire_noise20/000802/condat.png','[CM12]<br> PSNR: 23.20','100%');
+ add_image_with_width('sup_html/moire_noise20/000802/gharbi.png','[GCPD16]<br> PSNR: 27.98','100%');
+ add_image_with_width('sup_html/moire_noise20/000802/ours.png','<b>Our 4x4<br> PSNR: <u>30.21</u></br>','100%');
+ add_image_with_width('sup_html/moire_noise20/000802/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire_noise20/000390/corruped.png',' Corrupted Image  <br>  PSNR: 22.44','100%');
+ add_image_with_width('sup_html/moire_noise20/000390/chakrabarti.png','[Cha16]<br> PSNR: 19.12','100%');
+ add_image_with_width('sup_html/moire_noise20/000390/condat.png','[CM12]<br> PSNR: 22.25','100%');
+ add_image_with_width('sup_html/moire_noise20/000390/gharbi.png','[GCPD16]<br> PSNR: 26.84','100%');
+ add_image_with_width('sup_html/moire_noise20/000390/ours.png','<b>Our 4x4<br> PSNR: <u>27.51</u></br>','100%');
+ add_image_with_width('sup_html/moire_noise20/000390/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire_noise20/000233/corruped.png',' Corrupted Image  <br>  PSNR: 22.21','100%');
+ add_image_with_width('sup_html/moire_noise20/000233/chakrabarti.png','[Cha16]<br> PSNR: 19.27','100%');
+ add_image_with_width('sup_html/moire_noise20/000233/condat.png','[CM12]<br> PSNR: 22.21','100%');
+ add_image_with_width('sup_html/moire_noise20/000233/gharbi.png','[GCPD16]<br> PSNR: 27.13','100%');
+ add_image_with_width('sup_html/moire_noise20/000233/ours.png','<b>Our 4x4<br> PSNR: <u>29.07</u></br>','100%');
+ add_image_with_width('sup_html/moire_noise20/000233/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire_noise20/000313/corruped.png',' Corrupted Image  <br>  PSNR: 22.29','100%');
+ add_image_with_width('sup_html/moire_noise20/000313/chakrabarti.png','[Cha16]<br> PSNR: 19.38','100%');
+ add_image_with_width('sup_html/moire_noise20/000313/condat.png','[CM12]<br> PSNR: 21.48','100%');
+ add_image_with_width('sup_html/moire_noise20/000313/gharbi.png','[GCPD16]<br> PSNR: 25.05','100%');
+ add_image_with_width('sup_html/moire_noise20/000313/ours.png','<b>Our 4x4<br> PSNR: <u>26.84</u></br>','100%');
+ add_image_with_width('sup_html/moire_noise20/000313/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire_noise20/000323/corruped.png',' Corrupted Image  <br>  PSNR: 23.34','100%');
+ add_image_with_width('sup_html/moire_noise20/000323/chakrabarti.png','[Cha16]<br> PSNR: 21.10','100%');
+ add_image_with_width('sup_html/moire_noise20/000323/condat.png','[CM12]<br> PSNR: 23.60','100%');
+ add_image_with_width('sup_html/moire_noise20/000323/gharbi.png','[GCPD16]<br> PSNR: 28.93','100%');
+ add_image_with_width('sup_html/moire_noise20/000323/ours.png','<b>Our 4x4<br> PSNR: <u>30.69</u></br>','100%');
+ add_image_with_width('sup_html/moire_noise20/000323/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire_noise20/000349/corruped.png',' Corrupted Image  <br>  PSNR: 22.14','100%');
+ add_image_with_width('sup_html/moire_noise20/000349/chakrabarti.png','[Cha16]<br> PSNR: 15.53','100%');
+ add_image_with_width('sup_html/moire_noise20/000349/condat.png','[CM12]<br> PSNR: 22.39','100%');
+ add_image_with_width('sup_html/moire_noise20/000349/gharbi.png','[GCPD16]<br> PSNR: 29.25','100%');
+ add_image_with_width('sup_html/moire_noise20/000349/ours.png','<b>Our 4x4<br> PSNR: <u>29.55</u></br>','100%');
+ add_image_with_width('sup_html/moire_noise20/000349/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire_noise20/000706/corruped.png',' Corrupted Image  <br>  PSNR: 22.14','100%');
+ add_image_with_width('sup_html/moire_noise20/000706/chakrabarti.png','[Cha16]<br> PSNR: 23.74','100%');
+ add_image_with_width('sup_html/moire_noise20/000706/condat.png','[CM12]<br> PSNR: 22.45','100%');
+ add_image_with_width('sup_html/moire_noise20/000706/gharbi.png','[GCPD16]<br> PSNR: 27.74','100%');
+ add_image_with_width('sup_html/moire_noise20/000706/ours.png','<b>Our 4x4<br> PSNR: <u>29.03</u></br>','100%');
+ add_image_with_width('sup_html/moire_noise20/000706/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire_noise20/000352/corruped.png',' Corrupted Image  <br>  PSNR: 22.13','100%');
+ add_image_with_width('sup_html/moire_noise20/000352/chakrabarti.png','[Cha16]<br> PSNR: 22.90','100%');
+ add_image_with_width('sup_html/moire_noise20/000352/condat.png','[CM12]<br> PSNR: 22.33','100%');
+ add_image_with_width('sup_html/moire_noise20/000352/gharbi.png','[GCPD16]<br> PSNR: 27.16','100%');
+ add_image_with_width('sup_html/moire_noise20/000352/ours.png','<b>Our 4x4<br> PSNR: <u>28.73</u></br>','100%');
+ add_image_with_width('sup_html/moire_noise20/000352/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire_noise20/000817/corruped.png',' Corrupted Image  <br>  PSNR: 22.06','100%');
+ add_image_with_width('sup_html/moire_noise20/000817/chakrabarti.png','[Cha16]<br> PSNR: 18.42','100%');
+ add_image_with_width('sup_html/moire_noise20/000817/condat.png','[CM12]<br> PSNR: 22.45','100%');
+ add_image_with_width('sup_html/moire_noise20/000817/gharbi.png','[GCPD16]<br> PSNR: 25.85','100%');
+ add_image_with_width('sup_html/moire_noise20/000817/ours.png','<b>Our 4x4<br> PSNR: <u>27.50</u></br>','100%');
+ add_image_with_width('sup_html/moire_noise20/000817/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/moire_noise20/000625/corruped.png',' Corrupted Image  <br>  PSNR: 22.16','100%');
+ add_image_with_width('sup_html/moire_noise20/000625/chakrabarti.png','[Cha16]<br> PSNR: 18.37','100%');
+ add_image_with_width('sup_html/moire_noise20/000625/condat.png','[CM12]<br> PSNR: 22.00','100%');
+ add_image_with_width('sup_html/moire_noise20/000625/gharbi.png','[GCPD16]<br> PSNR: 28.85','100%');
+ add_image_with_width('sup_html/moire_noise20/000625/ours.png','<b>Our 4x4<br> PSNR: <u>29.10</u></br>','100%');
+ add_image_with_width('sup_html/moire_noise20/000625/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+
+
+<h3 id="hdrvdp">vdp</h3><table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000330/corruped.png',' Corrupted Image  <br>  PSNR: 22.22','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000330/chakrabarti.png','[Cha16]<br> PSNR: 18.78','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000330/condat.png','[CM12]<br> PSNR: 21.71','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000330/gharbi.png','[GCPD16]<br> PSNR: 23.53','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000330/ours.png','<b>Our 4x4<br> PSNR: <u>25.33</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000330/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+ 
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000439/corruped.png',' Corrupted Image  <br>  PSNR: 22.18','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000439/chakrabarti.png','[Cha16]<br> PSNR: 22.53','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000439/condat.png','[CM12]<br> PSNR: 22.58','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000439/gharbi.png','[GCPD16]<br> PSNR: 28.18','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000439/ours.png','<b>Our 4x4<br> PSNR: <u>30.56</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000439/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+ 
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000646/corruped.png',' Corrupted Image  <br>  PSNR: 22.17','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000646/chakrabarti.png','[Cha16]<br> PSNR: 17.76','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000646/condat.png','[CM12]<br> PSNR: 21.68','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000646/gharbi.png','[GCPD16]<br> PSNR: 23.94','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000646/ours.png','<b>Our 4x4<br> PSNR: <u>26.03</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000646/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000145/corruped.png',' Corrupted Image  <br>  PSNR: 22.81','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000145/chakrabarti.png','[Cha16]<br> PSNR: 20.49','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000145/condat.png','[CM12]<br> PSNR: 22.93','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000145/gharbi.png','[GCPD16]<br> PSNR: 26.96','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000145/ours.png','<b>Our 4x4<br> PSNR: <u>27.89</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000145/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000925/corruped.png',' Corrupted Image  <br>  PSNR: 23.35','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000925/chakrabarti.png','[Cha16]<br> PSNR: 19.69','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000925/condat.png','[CM12]<br> PSNR: 21.52','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000925/gharbi.png','[GCPD16]<br> PSNR: 26.24','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000925/ours.png','<b>Our 4x4<br> PSNR: <u>27.51</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000925/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000314/corruped.png',' Corrupted Image  <br>  PSNR: 22.55','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000314/chakrabarti.png','[Cha16]<br> PSNR: 19.93','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000314/condat.png','[CM12]<br> PSNR: 22.61','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000314/gharbi.png','[GCPD16]<br> PSNR: 25.26','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000314/ours.png','<b>Our 4x4<br> PSNR: <u>27.17</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000314/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000343/corruped.png',' Corrupted Image  <br>  PSNR: 22.48','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000343/chakrabarti.png','[Cha16]<br> PSNR: 22.36','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000343/condat.png','[CM12]<br> PSNR: 22.10','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000343/gharbi.png','[GCPD16]<br> PSNR: 25.73','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000343/ours.png','<b>Our 4x4<br> PSNR: <u>27.28</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000343/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000389/corruped.png',' Corrupted Image  <br>  PSNR: 22.47','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000389/chakrabarti.png','[Cha16]<br> PSNR: 21.18','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000389/condat.png','[CM12]<br> PSNR: 22.18','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000389/gharbi.png','[GCPD16]<br> PSNR: 25.50','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000389/ours.png','<b>Our 4x4<br> PSNR: <u>26.76</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000389/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000302/corruped.png',' Corrupted Image  <br>  PSNR: 22.76','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000302/chakrabarti.png','[Cha16]<br> PSNR: 18.88','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000302/condat.png','[CM12]<br> PSNR: 21.54','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000302/gharbi.png','[GCPD16]<br> PSNR: 25.34','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000302/ours.png','<b>Our 4x4<br> PSNR: <u>26.48</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000302/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000995/corruped.png',' Corrupted Image  <br>  PSNR: 23.14','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000995/chakrabarti.png','[Cha16]<br> PSNR: 19.94','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000995/condat.png','[CM12]<br> PSNR: 21.78','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000995/gharbi.png','[GCPD16]<br> PSNR: 25.62','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000995/ours.png','<b>Our 4x4<br> PSNR: <u>26.82</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000995/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000522/corruped.png',' Corrupted Image  <br>  PSNR: 22.47','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000522/chakrabarti.png','[Cha16]<br> PSNR: 20.28','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000522/condat.png','[CM12]<br> PSNR: 21.90','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000522/gharbi.png','[GCPD16]<br> PSNR: 25.15','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000522/ours.png','<b>Our 4x4<br> PSNR: <u>26.91</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000522/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000275/corruped.png',' Corrupted Image  <br>  PSNR: 22.15','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000275/chakrabarti.png','[Cha16]<br> PSNR: 21.06','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000275/condat.png','[CM12]<br> PSNR: 22.67','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000275/gharbi.png','[GCPD16]<br> PSNR: 30.64','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000275/ours.png','<b>Our 4x4<br> PSNR: <u>31.07</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000275/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000893/corruped.png',' Corrupted Image  <br>  PSNR: 22.23','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000893/chakrabarti.png','[Cha16]<br> PSNR: 19.94','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000893/condat.png','[CM12]<br> PSNR: 21.84','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000893/gharbi.png','[GCPD16]<br> PSNR: 27.51','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000893/ours.png','<b>Our 4x4<br> PSNR: <u>29.37</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000893/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000077/corruped.png',' Corrupted Image  <br>  PSNR: 22.40','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000077/chakrabarti.png','[Cha16]<br> PSNR: 16.34','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000077/condat.png','[CM12]<br> PSNR: 22.54','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000077/gharbi.png','[GCPD16]<br> PSNR: 24.91','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000077/ours.png','<b>Our 4x4<br> PSNR: <u>26.74</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000077/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000720/corruped.png',' Corrupted Image  <br>  PSNR: 22.32','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000720/chakrabarti.png','[Cha16]<br> PSNR: 19.75','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000720/condat.png','[CM12]<br> PSNR: 22.05','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000720/gharbi.png','[GCPD16]<br> PSNR: 29.86','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000720/ours.png','<b>Our 4x4<br> PSNR: <u>30.44</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000720/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000402/corruped.png',' Corrupted Image  <br>  PSNR: 22.24','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000402/chakrabarti.png','[Cha16]<br> PSNR: 21.42','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000402/condat.png','[CM12]<br> PSNR: 22.10','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000402/gharbi.png','[GCPD16]<br> PSNR: 26.76','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000402/ours.png','<b>Our 4x4<br> PSNR: <u>28.17</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000402/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000169/corruped.png',' Corrupted Image  <br>  PSNR: 22.24','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000169/chakrabarti.png','[Cha16]<br> PSNR: 20.64','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000169/condat.png','[CM12]<br> PSNR: 22.42','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000169/gharbi.png','[GCPD16]<br> PSNR: 27.88','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000169/ours.png','<b>Our 4x4<br> PSNR: <u>29.47</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000169/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000562/corruped.png',' Corrupted Image  <br>  PSNR: 22.71','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000562/chakrabarti.png','[Cha16]<br> PSNR: 20.87','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000562/condat.png','[CM12]<br> PSNR: 22.39','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000562/gharbi.png','[GCPD16]<br> PSNR: 24.59','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000562/ours.png','<b>Our 4x4<br> PSNR: <u>26.12</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000562/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+
+<table width="100%"> <tbody><tr> <script type="text/javascript"> reset_caption_counter();
+ add_image_with_width('sup_html/hdrvdp_noise20/000957/corruped.png',' Corrupted Image  <br>  PSNR: 22.80','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000957/chakrabarti.png','[Cha16]<br> PSNR: 21.59','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000957/condat.png','[CM12]<br> PSNR: 22.52','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000957/gharbi.png','[GCPD16]<br> PSNR: 28.49','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000957/ours.png','<b>Our 4x4<br> PSNR: <u>30.53</u></br>','100%');
+ add_image_with_width('sup_html/hdrvdp_noise20/000957/ground_truth.png','Ground Truth<br> &nbsp;','100%');</script> 
+ </tr> 
+ </tbody></table> <br><br><br>
+</div>
+</div>
+</body></html>

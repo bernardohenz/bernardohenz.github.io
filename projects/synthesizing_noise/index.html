@@ -1,8 +1,8 @@
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head lang="eng">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-	<meta name="description" content="We present a CNN architecture forperforming joint design of CFA patterns and demosaicing.">
-	<meta name="keywords" content="Color Filter Arrays, Demosaicing, Demosaicking, Image Reconstruction, Convolutional Neural Networks, Computational Photography, Deep Learning">
+	<meta name="description" content="We present a deep-learning strategy for synthesizing noise similar to the one found in digital photographs.">
+	<meta name="keywords" content="Synthesizing Camera Noise using Generative Adversarial Networks">
 
 		
 	<link rel="stylesheet" type="text/css" href="./style.css"> 
@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="project.css" />
   
   
-	<title>Deep Joint Design of Color Filter Arrays and Demosaicing</title> 
+	<title>Synthesizing Camera Noise using Generative Adversarial Networks</title> 
 </head> 
 
 <body> 
@@ -21,11 +21,11 @@
 	<header>
     <!-- === Teaser ===================== -->
     
-    <img width=70% id="teaser" src="images/cover.png" alt="Capture and reconstruction of color images on single-sensor cameras.">
+    <img width=55% id="teaser" src="images/cover.png" alt="Synthesizing camera noise using our technique.">
 
 
     <!-- === Title ===================== -->
-    <div id="title">Deep Joint Design of Color Filter Arrays and Demosaicing</div>
+    <div id="title">Synthesizing Camera Noise using Generative Adversarial Networks</div>
 
     <!-- === Authors ===================== -->
     <table id="authors">
@@ -33,7 +33,7 @@
 		<tr>
 			<!-- Author #0 -->
 			<td class="author">
-			  <a href="https://bernardohenz.github.io"><span class="author-name">Bernardo Henz</span></a><br>
+			  <a href="https://bernardohenz.github.io/"><span class="author-name">Bernardo Henz</span></a><br>
 			  <a class="author-email" href="mailto:bhenz@inf.ufrgs.br">bhenz@inf.ufrgs.br</a>
 			</td>
 
@@ -76,7 +76,6 @@
     <tr>
 		<td width="16%"><a href="#Abstract">Abstract</a></td>
 		<td width="13%"><a href="#Downloads">Downloads</a></td>
-		<td width="13%"><a href="#Results">Results</a></td>
 		<td width="13%"><a href="#Reference">Reference</a></td>
     </tr>
 
@@ -89,10 +88,10 @@
   <h1 id="Abstract">Abstract</h1>
   </div></div></div>
   <p id="abstract">
-	We present a convolutional neural network architecture for performing joint design of color filter array (CFA) patterns and demosaicing. Our generic model allows the training of CFAs of arbitrary sizes, optimizing each color filter over the entire RGB color space. The patterns and algorithms produced by our method provide high-quality color reconstructions. We demonstrate the effectiveness of our approach by showing that its results achieve higher PSNR than the ones obtained with state-of-the-art techniques on all standard demosaicing datasets, both for noise-free and noisy scenarios. Our method can also be used to obtain demosaicing strategies for pre-defined CFAs, such as the Bayer pattern, for which our results also surpass even the demosaicing algorithms specifically designed for such a pattern.
+    We present a technique for synthesizing realistic noise for digital photographs. It can adjust the noise level of an input photograph, either increasing or decreasing it, to match a target ISO level. Our solution learns the mappings among different ISO levels from unpaired data using generative adversarial networks. We demonstrate its effectiveness both quantitatively, using Kullback-Leibler divergence and Kolmogorov-Smirnov test, and qualitatively through a large number of examples. We also demonstrate its practical applicability by using its results to significantly improve the performance of a state-of-the-art trainable denoising method. Our technique should benefit several computer-vision applications that seek robustness to noisy scenarios.
 	<h2>Keywords</h2>
 	<p>
-    Color Filter Arrays; Demosaicing; Computational photography; Convolutional Neural networks.
+    Noise model; GANs; Deep learning.
 	</p>
  </p> 
  
@@ -102,7 +101,8 @@
   <h1 id="Downloads">Downloads</h1>
   </div></div></div>
    <h2>Paper</h2>
-   <center>
+   <p>Soon the paper will be made available.</p>
+   <!-- <center>
         <a href="deep_joint_design_of_color_filter_arrays_and_demosaicing_pre-print.pdf"><img alt="" src="images/pdf-icon.png"></a> <br>
         <a href="deep_joint_design_of_color_filter_arrays_and_demosaicing_pre-print.pdf">Pre-print Version (7.3 MB)</a>  <br> <br>
 
@@ -115,23 +115,11 @@
         <a href="https://github.com/bernardohenz/deep_joint_design_cfa_demosaicing" target="_blank">
          <svg height="64" version="1.1" viewBox="0 0 16 16" width="64"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg> </a>
   </center>
-
+-->
 
 <br> <br>
 
  </p>
-
-  <!-- === Section: Results===================== -->
-  <div class="h1-shadow-0"><div class="h1-shadow-1"><div class="h1-shadow-2">
-  <h1 id="Results">Results</h1>
-  </div></div></div>
-  <h2>Our Trained 4x4 CFAs</h2>
-  <center>
-  <img width=30% src="images/our_trained_cfas.png" alt="Our trained CFAs.">
-  </center>
-  <h2>Reconstruction Results</h2>
-  Check our <a href="results/index.html">supplementary material</a> to view various examples comparing reconstructions of our models against state-of-the-art techniques, both for noise-free and noisy scenarios.
-  
  
  <!-- === Section: Reference ===================== -->
   <div class="h1-shadow-0"><div class="h1-shadow-1"><div class="h1-shadow-2">
@@ -139,20 +127,16 @@
   </div></div></div>
   <h2>Citation</h2>
   <p>
-    Bernardo Henz, Eduardo S. L. Gastal, Manuel M. Oliveira. Deep Joint Design of Color Filter Arrays and Demosaicing, <b>Computer Graphics Forum</b>, 37(2), pp. 389-399, 2018.
+    Bernardo Henz, Eduardo S. L. Gastal, Manuel M. Oliveira. Synthesizing Camera Noise using Generative Adversarial Networks, <b>IEEE Transactions on Visualization and Computer Graphics</b>, ?(?), pp. ??-??, 2020.
   </p>
   <h2>BibTeX</h2>
-  <pre>@article{HenzGastalOliveira_2018,
-    author  = {Bernardo Henz and Eduardo S. L. Gastal and Manuel M. Oliveira},
-    title   = {Deep Joint Design of Color Filter Arrays and Demosaicing},
-    journal = {Computer Graphics Forum},
-    volume  = {37},
-    number  = {2},
-    DOI     = {10.1111/cgf.13370},
-    ISSN    = {1467-8659},
-    pages   = {389--399},
-    year    = {2018},
-}
+  <pre>@article{HenzGastalOliveira_2020,
+    author = {Bernardo Henz and Eduardo S. L. Gastal and Manuel M. Oliveira},
+    title   = {Synthesizing Camera Noise using Generative Adversarial Networks},
+    journal = {IEEE Transactions on Visualization and Computer Graphics},
+    volume = {},
+    year    = {2020},
+    }
   </pre>
 
   
@@ -166,7 +150,7 @@
   <table align="center">
     <tbody><tr>
       <td ><a href="http://www.cnpq.br/" target="_blank"><img style="padding: 0 1em;" src="./images/cnpq.png"></a></td>
-      <td > This work was sponsored by CNPq-Brazil (fellowships and grants 306196/2014-0, 423673/2016-5). We would like to thank NVIDIA for donating the GeForce GTX Titan X GPU used for this research.</td>
+      <td > This work was sponsored by CNPq-Brazil (fellowships and grants 312975/2018-0, 436932/2018-0, 423673/2016-5), and financed in part by the Coordenação de Aperfeiçoamento de Pessoal de Nı́vel Superior – Brasil (CAPES) – Finance Code 001. We would like to thank NVIDIA for donating the GeForce GTX Titan X GPU used for this research.</td>
 	  <td ><img style="padding: 0 1em;" height="35px" src="./images/logo-nvidia.png"></td>
     </tr>
   </tbody></table>

@@ -21,7 +21,16 @@
 	<header>
     <!-- === Teaser ===================== -->
     
-    <img width=55% id="teaser" src="images/cover.png" alt="Synthesizing camera noise using our technique.">
+    <img width=55% id="teaser" src="images/cover_no-caption.png" alt="Synthesizing camera noise using our technique.">
+    <table id="authors">
+      <tbody>
+      <tr>
+        <td width="15%"></td>
+        <td width="70%">Fig. 1. Using our technique to adjust the noise level of photographs to different ISO values. A photograph captured with ISO 100 (left) has its noise level adjusted to ISO 1600 (blue arrow). Likewise, another photograph of the same scene taken with ISO 1600 (right) has its noise level adjusted to ISO 100 (red arrow). The noise distributions for patches Real 1600 and Synthetic 1600 have a Kullback-Leibler (KL) divergence of 0.0617 and the result of their Kolmogorov-Smirnov (KS) test is 0.0878 (with a p-value of 7.81 × 10 −220 ), indicating that the two distributions are very similar. The red, green, and blue histograms underneath patch Real 1600 show the noise distributions corresponding to the R, G, and B channels of patch Real 1600, respectively. The superimposed gray histograms are the corresponding noise distributions for the patch Synthetic 1600. The PSNR value computed for patch Synthetic 100 is 29.13, also indicating a good agreement with patch Real 100.</td>
+        <td width="15%"></td>
+      </tr>
+		</tbody>
+	</table>
 
 
     <!-- === Title ===================== -->
@@ -131,7 +140,7 @@
   </p>
   <h2>BibTeX</h2>
   <pre>@article{HenzGastalOliveira_2020,
-    author = {Bernardo Henz and Eduardo S. L. Gastal and Manuel M. Oliveira},
+    author = {Bernardo Henz, Eduardo S. L. Gastal, Manuel M. Oliveira},
     title   = {Synthesizing Camera Noise using Generative Adversarial Networks},
     journal = {IEEE Transactions on Visualization and Computer Graphics},
     volume = {},
